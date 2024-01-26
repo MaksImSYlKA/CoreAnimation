@@ -7,17 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet var coreAnimationView: UIView!
-    @IBOutlet var coreAnimation: UIButton!
+final class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func coreAnimation(_ sender: UIButton) {
+    @IBOutlet var coreAnimationView: UIView!
+    
+    private var isAnimating = false
+    
+    @IBAction func startCoreAnimation(_ sender: UIButton) {
+        sender.pulsate()
+        
+        UIView.animate(
+            withDuration: 0.7,
+            delay: 0,
+            options: [.autoreverse,.repeat]) {
+                [unowned self] in
+                if !isAnimating {
+                    coreAnimationView.frame.origin.x -= 40
+                    isAnimating.toggle()
+                }
+            }
     }
     
 }
