@@ -40,19 +40,20 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-ec-fnz">
-                                <rect key="frame" x="123.66666666666669" y="638.66666666666663" width="183" height="35"/>
+                                <rect key="frame" x="95" y="638.66666666666663" width="240" height="35"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Core Animation">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Core Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="coreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2B-9o-s8F"/>
+                                    <action selector="startCoreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2B-9o-s8F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,12 +62,12 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eDi-ec-fnz" secondAttribute="bottom" multiplier="4:3" id="Egu-5m-085"/>
                             <constraint firstItem="0Yb-GE-QAY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PJy-49-Pfx"/>
+                            <constraint firstItem="eDi-ec-fnz" firstAttribute="width" secondItem="0Yb-GE-QAY" secondAttribute="width" id="Y1o-Sn-TDb"/>
                             <constraint firstItem="0Yb-GE-QAY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="bcU-zD-KvQ"/>
                             <constraint firstItem="eDi-ec-fnz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hJA-39-iqz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coreAnimation" destination="eDi-ec-fnz" id="iJ4-xm-QrM"/>
                         <outlet property="coreAnimationView" destination="0Yb-GE-QAY" id="T7t-Zi-892"/>
                     </connections>
                 </viewController>
@@ -77,10 +78,10 @@
     </scenes>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
