@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import SpringAnimation
+
 
 final class ViewController: UIViewController {
     
     @IBOutlet var coreAnimationView: UIView!
     
+    @IBOutlet var springAnimationView: SpringView!
     private var isAnimating = false
     
     @IBAction func startCoreAnimation(_ sender: UIButton) {
@@ -28,5 +31,14 @@ final class ViewController: UIViewController {
             }
     }
     
+    @IBAction func startSpringAnimation(_ sender: SpringButton) {
+        sender.animation = "pop"
+        sender.duration = 2
+        sender.animate()
+        
+        springAnimationView.animation = "squeeze"
+        springAnimationView.force = 2
+        springAnimationView.animate()
+    }
 }
 

@@ -103,6 +103,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSg-Uc-U4C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="coreAnimationView" destination="0Yb-GE-QAY" id="T7t-Zi-892"/>
+                        <outlet property="springAnimationView" destination="txs-6N-34M" id="46q-Gg-4GN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
